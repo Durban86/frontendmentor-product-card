@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+body {
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: hsl(0,0%,100%);
+    width: 375px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-self: stretch;
+    padding: 28px;
+}
+
+.category {
+    font-family: 'Montserrat';
+    margin: 0;
+    font-size: 14px;
+    letter-spacing: .2rem;
+    color: hsl(228, 12%, 48%);
+}
+
+.product-info > h1 {
+    font-family: 'Fraunces';
+    font-weight: 700;
+    color: hsl(212, 21%, 14%);
+}
+
+.description {
+    margin: 0;
+    font-family: 'Montserrat';
+    font-size: 14px;
+    line-height: 1.5;
+    color: hsl(228, 12%, 48%);
+}
+
+.price {
+    display: flex;
+}
+
+.discount {
+    font-family: 'Fraunces';
+    font-size: 32px;
+    margin-right: 32px;
+    color: hsl(158, 36%, 37%);
+}
+
+.original {
+    align-self: center;
+    font-family: 'Montserrat';
+    text-decoration: line-through;
+    font-size: 14px;
+    color: hsl(228, 12%, 48%);
+}
+
+.product-info > button {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0,0%,100%);
+    align-self: center;
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 14px;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.product-info > button:hover {
+    background-color: hsl(212, 21%, 14%);
+}
+
+@media (max-width:961px) {
+    #product-img {
+        content:url(images/image-product-mobile.jpg);
+        max-width: 375px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+}
+
+@media (min-width:962px) {
+    #product-img {
+        content:url(images/image-product-desktop.jpg);
+        max-width: 300px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    .container {
+        flex-direction: row;
+        width: 600px;
+    }
+}
